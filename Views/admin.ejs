@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <h2>Create New Post</h2>
+    <form action="/admin/posts" method="POST">
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="content" placeholder="Content" required></textarea>
+        <button type="submit">Create Post</button>
+    </form>
+    <h2>Existing Posts</h2>
+    <% posts.forEach(post => { %>
+        <article>
+            <h3><%= post.title %></h3>
+            <p><%= post.content %></p>
+            <form action="/admin/posts/<%= post.id %>" method="POST">
+                <input type="text" name="title" value="<%= post.title %>" required>
+                <textarea name="content" required><%= post.content %></textarea>
+                <button type="submit">Update</button>
+            </form>
+            <form action="/admin/posts/<%= post.id %>/delete" method="POST">
+                <button type="submit">Delete</button>
+            </form>
+        </article>
+    <% }); %>
+    <a href="/">View Blog</a>
+</body>
+</html>

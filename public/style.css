@@ -1,0 +1,67 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Article Styles */
+article {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+small {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Link Styles */
+a {
+    display: block;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px auto;
+    width: 200px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+a:hover {
+    background: #555;
+}
